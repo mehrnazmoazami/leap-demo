@@ -16,7 +16,7 @@ Feature: Login
     And User enters invalid Password
     And User select CAPTCHA correctly
     And User clicks on Register
-    Then Message displayed Passwords must have at least one non alphanumeric character, one digit ('0'-'9'), one uppercase ('A'-'Z'), one lowercase ('a'-'z'), one special character and Password must be eight characters or longer.
+    Then Message displayed "Passwords must have at least one non alphanumeric character, one digit ('0'-'9'), one uppercase ('A'-'Z'), one lowercase ('a'-'z'), one special character and Password must be eight characters or longer."
 
   Scenario: Successful Login with Valid Credential
     Given User enters  valid UserName and Password
@@ -27,7 +27,7 @@ Feature: Login
   Scenario Outline: Unsuccessful Login  with invalid credentials
     Given User enters <userName> as UserName and <password> as Password
     When User clicks on Login
-    Then Message displayed Invalid username or password!
+    Then Message displayed Invalid username or password
 
     Examples:
       | userName | password |
