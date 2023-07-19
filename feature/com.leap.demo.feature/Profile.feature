@@ -5,10 +5,10 @@ Feature: Profile
     And User added a Book Speeaking Javascript to Collection
     And User is in Profile Page
 
-  Scenario: UserName
+  Scenario: UserName displayed
     Then UserName displayed
 
-  Scenario: Book  Detail
+  Scenario: Show Book Detail
     When User clicks on Book Title
     Then Book Detail displayed
 
@@ -18,7 +18,7 @@ Feature: Profile
     And User Clicks on Search
     Then Three Books with Java title are displayed in Collection
 
-  Scenario: Search not found
+  Scenario: Search doesn't returrn any book
     Given User does not have any Book with Apple title in Collection
     When User write Apple in Search field
     And User Clicks on Search
@@ -30,7 +30,7 @@ Feature: Profile
     When User remove Java from Search field
     Then All Books are displayed in Collection
 
-  Scenario: Page
+  Scenario: One Page
     Given User has one Book in Collection
     When User write 2 in Page field
     Then 1 is showed as Page
@@ -65,7 +65,7 @@ Feature: Profile
     When User clicks on Go To Book Store
     Then User is in Book Store Page
 
-  Scenario: Rows Count
+  Scenario: Edit Rows Count
     When User clicks on 10 rows
     Then 10 rows  is displayed in profile
 
