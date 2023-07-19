@@ -18,7 +18,7 @@ Feature: Profile
     And User Clicks on Search
     Then Three Books with Java title are displayed in Collection
 
-  Scenario: Search doesn't returrn any book
+  Scenario: Search doesn't return any book
     Given User does not have any Book with Apple title in Collection
     When User write Apple in Search field
     And User Clicks on Search
